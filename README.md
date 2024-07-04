@@ -9,6 +9,16 @@
 
 **Serde is a framework for *ser*ializing and *de*serializing Rust data structures efficiently and generically.**
 
+> **What's different?** 
+> 
+> This is an almost exact duplicate of serde_json. Two methods on the
+> Deserializer have been made public:
+> - eat_char
+> - peek
+> 
+> This allows for a custom, streaming deserializer, without requiring
+> the caller to allocate a new Deserializer on ever call to `next`.
+
 ---
 
 ```toml
