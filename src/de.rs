@@ -210,7 +210,7 @@ impl<'de, R: Read<'de>> Deserializer<R> {
         self.disable_recursion_limit = true;
     }
 
-    pub(crate) fn peek(&mut self) -> Result<Option<u8>> {
+    pub fn peek(&mut self) -> Result<Option<u8>> {
         self.read.peek()
     }
 
