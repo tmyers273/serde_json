@@ -218,7 +218,7 @@ impl<'de, R: Read<'de>> Deserializer<R> {
         Ok(tri!(self.peek()).unwrap_or(b'\x00'))
     }
 
-    fn eat_char(&mut self) {
+    pub fn eat_char(&mut self) {
         self.read.discard();
     }
 
